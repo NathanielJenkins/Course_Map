@@ -75,7 +75,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Course_Map.wsgi.application'
 
-
+TIMEOUT = None
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
