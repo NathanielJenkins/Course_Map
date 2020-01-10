@@ -1,0 +1,389 @@
+course: CSC 100
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 101
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 105
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 106
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 110
+prereq: One of Foundations of Math 12, Mathematics 12, Pre-Calculus 12, MATH 100, MATH 102, MATH 109, MATH 120. 
+coreq: None
+precoreq: None
+
+course: CSC 111
+prereq: One of Foundations of Math 12, Mathematics 12, Pre-Calculus 12, MATH 100, MATH 109, MATH 120. 
+coreq: None
+precoreq: None
+
+course: CSC 115
+prereq: CSC 110 or CSC 111. 
+coreq: None
+precoreq: None
+
+course: CSC 116
+prereq: CSC 110 or CSC 111. 
+coreq: None
+precoreq: None
+
+course: CSC 130
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 167
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 205
+prereq: None
+coreq: None
+precoreq: MATH 151 or MATH 211; and SENG 265. 
+
+course: CSC 225
+prereq: CSC 115 or CSC 116; and MATH 122. 
+coreq: None
+precoreq: None
+
+course: CSC 226
+prereq: CSC 225. 
+coreq: None
+precoreq: None
+
+course: CSC 230
+prereq: CSC 115 or CSC 116. 
+coreq: None
+precoreq: None
+
+course: CSC 299
+prereq: Two of CSC 115 with a minimum grade of B+, CSC 226 with a minimum grade of B+, CSC 230 with a minimum grade of B+, SENG 265 with a minimum grade of B+; and permission of the department. 
+coreq: None
+precoreq: None
+
+course: CSC 305
+prereq: CSC 226 and SENG 265; and MATH 110 or MATH 211. 
+coreq: None
+precoreq: None
+
+course: CSC 320
+prereq: CSC 226. 
+coreq: None
+precoreq: None
+
+course: CSC 322
+prereq: CSC 115 or CSC 116; and MATH 122 or PHIL 203. 
+coreq: None
+precoreq: None
+
+course: CSC 330
+prereq: CSC 226 and SENG 265; and One of CSC 230, CENG 255, ECE 255. 
+coreq: None
+precoreq: CSC 320 and CSC 360. 
+
+course: CSC 349A
+prereq: CSC 110 or CSC 111; and MATH 110 or MATH 211; and either MATH 200 and MATH 201, or MATH 202, or MATH 204. 
+coreq: None
+precoreq: None
+
+course: CSC 350
+prereq: CSC 225 and CSC 230. 
+coreq: None
+precoreq: None
+
+course: CSC 355
+prereq: CSC 230 or ECE 255; and MATH 122. 
+coreq: None
+precoreq: None
+
+course: CSC 360
+prereq: SENG 265; and One of CSC 230, CENG 255 or ECE 255. 
+coreq: None
+precoreq: CSC 226. 
+
+course: CSC 361
+prereq: SENG 265; and One of CSC 230, CENG 255, ECE 255. 
+coreq: None
+precoreq: CSC 226. 
+
+course: CSC 370
+prereq: CSC 226 and SENG 265. 
+coreq: None
+precoreq: None
+
+course: CSC 371
+prereq: One of Principles of Mathematics 11, MATH 100, MATH 102, MATH 120; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 375
+prereq: Either SENG 265, or HINF 130 and HINF 140. 
+coreq: None
+precoreq: HINF 140. 
+
+course: CSC 421
+prereq: CSC 226; and minimum fourth-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 422
+prereq: Either CSC 226, or CSC 225 and MATH 222; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 423
+prereq: CSC 226 with a minimum grade of B+; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 425
+prereq: CSC 320. 
+coreq: None
+precoreq: None
+
+course: CSC 426
+prereq: CSC 226; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 428A
+prereq: Either CSC 226 with a minimum grade of B+, or CSC 225 with a minimum grade of B+ and MATH 222 with a minimum grade of B; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 429
+prereq: Either CSC 320, or MATH 110 and STAT 254, MATH 222; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 435
+prereq: CSC 320 and CSC 330. 
+coreq: None
+precoreq: None
+
+course: CSC 445
+prereq: CSC 225; and MATH 110 or MATH 211; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 446
+prereq: CSC 115 or CSC 116; and one of PHYS 342, STAT 252, STAT 254, STAT 255, STAT 260, GEOG 226; and minimum third-year standing. 
+coreq: None
+precoreq: None
+
+course: CSC 449
+prereq: CSC 349A with a minimum grade of B or CSC 340 with a minimum grade of B. 
+coreq: None
+precoreq: None
+
+course: CSC 454
+prereq: CSC 360. 
+coreq: None
+precoreq: None
+
+course: CSC 460
+prereq: One of CSC 355, CENG 355, ECE 355; and CSC 360. 
+coreq: None
+precoreq: None
+
+course: CSC 461
+prereq: CSC 360; and one of CSC 361, CENG 460, ECE 458. 
+coreq: None
+precoreq: None
+
+course: CSC 462
+prereq: CSC 360; and one of CSC 361, CSC 450, CENG 460, ECE 458. 
+coreq: None
+precoreq: None
+
+course: CSC 463
+prereq: One of CSC 361, CSC 450, CENG 460, ECE 458. 
+coreq: None
+precoreq: None
+
+course: CSC 464
+prereq: CSC 320 and CSC 360. 
+coreq: None
+precoreq: None
+
+course: CSC 466
+prereq: One of CSC 361, CSC 450, CENG 460, ECE 458. 
+coreq: None
+precoreq: None
+
+course: CSC 467
+prereq: One of CSC 361, CSC 450, CENG 460, ECE 458. 
+coreq: None
+precoreq: None
+
+course: CSC 471
+prereq: CSC 305. 
+coreq: None
+precoreq: None
+
+course: CSC 472
+prereq: CSC 305. 
+coreq: None
+precoreq: None
+
+course: CSC 473
+prereq: CSC 305. 
+coreq: None
+precoreq: None
+
+course: CSC 475
+prereq: Two of CSC 330, CSC 340, CSC 360, CSC 370, ECE 260, ECE 310, ELEC 260, ELEC 310, SENG 310, SENG 330. 
+coreq: None
+precoreq: None
+
+course: CSC 482A
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 482B
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 482C
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 482D
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 483A
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 483B
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 483C
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 483D
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 484A
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 484B
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 484C
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 484D
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485A
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485B
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485C
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485D
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485E
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485F
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485G
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 485H
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 486A
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 486B
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 486C
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 486D
+prereq: None
+coreq: None
+precoreq: None
+
+course: CSC 490
+prereq: Minimum fourth-year standing in the Computer Science program; and permission of the department. 
+coreq: None
+precoreq: None
+
+course: CSC 497
+prereq: Fourth-year standing in a Computer Science Combined Program. 
+coreq: None
+precoreq: None
+
+course: CSC 498
+prereq: Minimum fourth-year standing in the Computer Science program with Bioinformatics Option; or permission of the department. 
+coreq: None
+precoreq: None
+
+course: CSC 499
+prereq: Minimum fourth-year standing; and declared Honours in Computer Science or declared Combined Honours in Mathematics and Computer Science, in Physics and Computer Science, or in Statistics and Computer Science. 
+coreq: None
+precoreq: None

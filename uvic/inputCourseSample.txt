@@ -1,0 +1,29 @@
+course: MATH 122
+prereq: One of MATH 100, MATH 102, MATH 109, MATH 151; or permission of the department.
+coreq: None
+precoreq: None
+
+course: CSC 225
+prereq: CSC 115 or CSC 116; and MATH 122. 
+coreq: None
+precoreq: None
+
+course: CSC 115
+prereq: CSC 110 or CSC 111. 
+coreq: None
+precoreq: None
+
+course: CSC 116
+prereq: CSC 110 or CSC 111. 
+coreq: None
+precoreq: None
+
+course: CSC 110
+prereq: One of Foundations of Math 12, Mathematics 12, Pre-Calculus 12, MATH 100, MATH 102, MATH 109, MATH 120. 
+coreq: None
+precoreq: None
+
+course: CSC 111
+prereq: One of Foundations of Math 12, Mathematics 12, Pre-Calculus 12, MATH 100, MATH 109, MATH 120. 
+coreq: None
+precoreq: None

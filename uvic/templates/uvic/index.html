@@ -1,0 +1,35 @@
+{% extends 'uvic/base.html' %}
+
+{% block css %}
+{% load static %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'uvic/css/index.css'%}">
+{% endblock css %}
+
+{% block content %}
+<div class = 'container' id = 'search'>
+    <div class = 'row'>
+        <div class = 'col-6'>
+
+            <form class = 'mx-auto' action = "" id = "course_form" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>   
+    </div>
+</div> 
+<div id="cy"></div>
+{% endblock content %}
+
+{% block scripts %}
+{{ block.super }}
+
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.9.4/cytoscape.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+<script src = "https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.2.2/cytoscape-dagre.min.js"></script>
+
+{% load static %}
+<script src="{% static 'uvic/js/index.js'%}"></script>
+{% endblock scripts %}
+
