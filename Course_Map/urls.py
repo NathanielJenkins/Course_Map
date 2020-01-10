@@ -22,6 +22,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('get_prereq/', views.get_prereq, name='get_prereq'),
     path('hood/', views.hood, name='hood'),
-    path('hood/rebuild/', views.rebuild, name = 'rebuild')
+    path('hood/rebuild/', views.rebuild, name = 'rebuild'),
+    path('hood/rebuild_live/', views.rebuild_live, name = 'rebuild_live')
 
 ]

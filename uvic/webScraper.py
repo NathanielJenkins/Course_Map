@@ -7,9 +7,12 @@ import json
 
 from bs4 import BeautifulSoup
 
+# custom
+from .rebuild import delete_all, process_course, process_prereq
+
 debug = 1
 
-def create_dict(ret = True):
+def create_dict(ret = True, live = False):
 	# --------------------- #
 	courseObectList = []
 	# ----------------------#
@@ -73,6 +76,15 @@ def create_dict(ret = True):
 							"precoreq" : precoreq
 						}
 						print (cid,courseDict[cid])
+
+						if (live):
+							course, created = process_course(cid)
+						
+							if (not created):
+								messages.error(request, 'Course not created')
+
+							process_prereq(course, prereq)
+
 	
 	if (ret):
 		return courseDict
