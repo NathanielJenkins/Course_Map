@@ -59,10 +59,3 @@ def rebuild(request):
 	return render(request, 'uvic/hood.html')
 
 
-@staff_member_required
-def rebuild_live(request):
-	delete_all()
-	create_dict(live = True)
-	return render(request, 'uvic/hood.html')
-
-

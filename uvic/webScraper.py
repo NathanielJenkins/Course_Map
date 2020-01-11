@@ -12,7 +12,7 @@ from .rebuild import delete_all, process_course, process_prereq
 
 debug = 1
 
-def create_dict(ret = True, live = False):
+def create_dict(ret = True):
 	# --------------------- #
 	courseObectList = []
 	# ----------------------#
@@ -76,16 +76,7 @@ def create_dict(ret = True, live = False):
 							"precoreq" : precoreq
 						}
 						print (cid,courseDict[cid])
-
-						if (live):
-							course, created = process_course(cid)
 						
-							if (not created):
-								messages.error(request, 'Course not created')
-
-							process_prereq(course, prereq)
-
-	
 	if (ret):
 		return courseDict
 	else:
