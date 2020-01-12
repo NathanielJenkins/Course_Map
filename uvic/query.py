@@ -61,7 +61,7 @@ def find_req(cid):
 
                 courses['edges'].append({
                     "data" : {
-                        "id" : course.cid + "-" + str(operation_1.id) + "-edge",
+                        "id" : course.cid + "-" + str(operation.id)+ "-edge",
                         "target" : course.cid + "-" + str(operation_1.id), 
                         "source": str(operation.id)
                     },
