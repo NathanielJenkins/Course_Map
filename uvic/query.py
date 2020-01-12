@@ -49,6 +49,15 @@ def find_req(cid):
                     "name" : operation.operation,
                 }
             })
+
+            courses['edges'].append({
+                "data" : {
+                    "id" : str(operation.id) + '-' + course.cid + "-" + str(operation_1.id),
+                    "target" : course.cid + "-" + str(operation_1.id), 
+                    "source": str(operation.id)
+                }
+            })      
+
             for combination in combination_set:
                 q.put (
                     { 
@@ -58,19 +67,9 @@ def find_req(cid):
                         "parent" : course,
                     }
                 ) 
-
-                courses['edges'].append({
-                    "data" : {
-                        "id" : course.cid + "-" + str(operation.id)+ "-edge",
-                        "target" : course.cid + "-" + str(operation_1.id), 
-                        "source": str(operation.id)
-                    },
-                })      
-
                 # add invisble edges so that dagre javascript works to create the layout
                 courses['edges'].append({
                     "data" : {
-                        "id" : course.cid + "-" + str(operation_1.id) + "-" + combination.course.cid + "-" + str(operation.id),
                         "target" : course.cid + "-" + str(operation_1.id), 
                         "source": combination.course.cid + "-" + str(operation.id),
 
