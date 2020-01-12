@@ -12,14 +12,17 @@ def find_req(cid):
 
     # add start var
     level = 0;
+
     q.put (
         { 
             "course" : Course.objects.get(cid=cid),
             "operation" : Operation(operation="Single", id=None),
             "level" : level, 
-            "parent" : Course(cid=None, id=None)
+            "parent" : None,
         }
     )
+
+
 
     while q.qsize() != 0: 
         
@@ -27,12 +30,12 @@ def find_req(cid):
         course = prereq_tuple['course']
         operation_1 = prereq_tuple['operation']
 
+        # unique 
         courses['nodes'].append({
                 "data" : {
                     "id" : course.cid + "-" + str(operation_1.id) , 
                     "name" : course.cid,
                     "parent": str(prereq_tuple['operation'].id),
-                    "type" : "course"
                 }
             })
 
@@ -40,31 +43,40 @@ def find_req(cid):
         operation_set = Operation.objects.filter(course = course)
         for operation in operation_set:
             combination_set = PreCombinationCourse.objects.filter(operation = operation)
-            if (operation.operation != "Single"):
-                courses['nodes'].append({
-                    "data" : {
-                        "id" : str(operation.id), 
-                        "name" : operation.operation,
-                        "type" : "operation"
-                    }
-                })
+            courses['nodes'].append({
+                "data" : {
+                    "id" : str(operation.id), 
+                    "name" : operation.operation,
+                }
+            })
             for combination in combination_set:
                 q.put (
                     { 
                         "course" : combination.course,
                         "operation" : operation,
                         "level" : prereq_tuple['level'] + 1, 
-                        "parent" : course
+                        "parent" : course,
                     }
                 ) 
 
                 courses['edges'].append({
                     "data" : {
+                        "id" : course.cid + "-" + str(operation_1.id) + "-edge",
+                        "target" : course.cid + "-" + str(operation_1.id), 
+                        "source": str(operation.id)
+                    },
+                })      
+
+                # add invisble edges so that dagre javascript works to create the layout
+                courses['edges'].append({
+                    "data" : {
                         "id" : course.cid + "-" + str(operation_1.id) + "-" + combination.course.cid + "-" + str(operation.id),
                         "target" : course.cid + "-" + str(operation_1.id), 
-                        "source": combination.course.cid + "-" + str(operation.id)
-                    }                  
-                })      
+                        "source": combination.course.cid + "-" + str(operation.id),
+
+                    },   
+                    "classes" : 'hidden'               
+                })          
     print(courses)
 
 
