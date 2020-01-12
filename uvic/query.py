@@ -21,7 +21,8 @@ def find_req(cid):
         }
     )
 
-    while not q.empty(): 
+    while q.qsize() != 0: 
+        
         prereq_tuple = q.get()
         course = prereq_tuple['course']
         operation_1 = prereq_tuple['operation']

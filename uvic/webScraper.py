@@ -7,12 +7,9 @@ import json
 
 from bs4 import BeautifulSoup
 
-# custom
-from .rebuild import delete_all, process_course, process_prereq
-
 debug = 1
 
-def create_dict(ret = True):
+def create_dict(ret = False):
 	# --------------------- #
 	courseObectList = []
 	# ----------------------#
@@ -27,9 +24,9 @@ def create_dict(ret = True):
 	# Loops through all the faculuties on the uvic page 
 	visitedFacList = [] 
 	#comment back in when you want all the courses in all fac
-	# for link in soup.find('section', class_='CoIn').find_all('a'): 
-	if 1==1: 
-		link = soup.find('a', text ="Computer Science")
+	for link in soup.find('section', class_='CoIn').find_all('a'): 
+	# if 1==1: 
+		# link = soup.find('a', text ="Computer Science")
 		#print (link)
 		l = urllib.parse.urljoin(url.geturl(), link.get('href'))
 		
@@ -76,7 +73,7 @@ def create_dict(ret = True):
 							"precoreq" : precoreq
 						}
 						print (cid,courseDict[cid])
-						
+
 	if (ret):
 		return courseDict
 	else:
