@@ -7,19 +7,23 @@
 {% endblock css %}
 
 {% block content %}
-<div class = 'container' id = 'search'>
+<div class = 'container-fluid shadow' id = 'search'>
     <div class = 'row'>
-        <div class = 'col'>
-
-            <form class = 'mx-auto' action = "" id = "course_form" method="post">
+        <div class = 'col my-auto'>
+            {% load crispy_forms_tags %}
+            <form class = 'form-inline' action = "" id = "course_form" method="post">
                 {% csrf_token %}
-                {{ form }}
-                <input type="submit" value="Submit">
+                <input class="form-control mr-2" id = 'cid-box' name="cid" placeholder="CSC 361">
+                <input id = 'search-btn' class="btn btn-outline-light" type="submit" value="Search">
             </form>
         </div>   
+        <div class = 'col my-auto'>
+            <h3 id = 'cid-title' class = 'display-4'></h3>
+        </div>
     </div>
+    <div id="cy"></div>
 </div> 
-<div id="cy"></div>
+
 {% endblock content %}
 
 {% block scripts %}
@@ -28,6 +32,11 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.9.4/cytoscape.min.js"></script>
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
 <script src = "https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.2.2/cytoscape-dagre.min.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous">
+</script>
 
 {% load static %}
 <script src="{% static 'uvic/js/index.js'%}"></script>

@@ -13,15 +13,17 @@ def find_req(cid):
     # add start var
     level = 0;
 
-    q.put (
-        { 
-            "course" : Course.objects.get(cid=cid),
-            "operation" : Operation(operation="Single", id=None),
-            "level" : level, 
-            "parent" : None,
-        }
-    )
-
+    try:
+        q.put (
+            { 
+                "course" : Course.objects.get(cid=cid),
+                "operation" : Operation(operation="Single", id=None),
+                "level" : level, 
+                "parent" : None,
+            }
+        )
+    except Course.DoesNotExist:
+        return {}
 
 
     while q.qsize() != 0: 
@@ -76,7 +78,5 @@ def find_req(cid):
                     },   
                     "classes" : 'hidden'               
                 })          
-    print(courses)
-
 
     return courses

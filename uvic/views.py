@@ -7,21 +7,30 @@ from django.http import HttpResponse, JsonResponse
 # custom
 from .rebuild import delete_all, process_course, process_prereq
 from .webScraper import create_dict
-from .forms import CourseForm	
 from .query import find_req
 
 # python
 import json
 import os
+import re
 
 
 # Create your views here.
 def index(request):
-
-	return render(request, 'uvic/index.html', {'form' : CourseForm})
+	return render(request, 'uvic/index.html')
 
 def get_prereq(request):
 	cid = request.GET.get('cid', '')
+
+	# check if the user included a space in their search
+	if not ' ' in cid: 
+		numbers = re.search(r'\d+', cid).group(0)
+		faculty = re.search(r'\D+', cid).group(0)
+		print(numbers, faculty)
+		cid = faculty + ' ' + numbers
+		
+
+	cid = cid.upper()
 	d = find_req(cid)
 	return JsonResponse(d)
 

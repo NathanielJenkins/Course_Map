@@ -1,7 +1,26 @@
 #cy {
-    height: 90%;
+    height: 100%;
     width: 100%;
     position: absolute;
-    left: 0;
-    top: 50px;
+    z-index: 0;
+    left: 0; 
+}
+
+#search {
+    background-color: slategray;
+}
+
+#cid-title {
+    color: white;
+}
+
+@media (max-width: 576px) {
+
+    #search-btn {
+        width: 100%;
+    }
+
+    #cid-box {
+        margin-right: 0 !important; 
+    }
 }
