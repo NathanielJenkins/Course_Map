@@ -1,13 +1,19 @@
 #cy {
-    height: 100%;
+    height: 85%;
     width: 100%;
     position: absolute;
     z-index: 0;
     left: 0; 
+    top: 15%; 
 }
 
 #search {
     background-color: slategray;
+}
+
+#text-container{
+    color: white;
+    font-size: 10px;  
 }
 
 #cid-title {

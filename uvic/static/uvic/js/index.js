@@ -1,6 +1,7 @@
-// trigger the submit button on load for CSC 361 as default
 
+var cy
 $( document ).ready(function() {
+  // trigger the submit button on load for CSC 361 as defaults
   $.get( "/get_prereq/", "cid=CSC%20361",  data => loadGraph(data))
 });
 
@@ -8,6 +9,7 @@ $( "#course_form" ).submit(function( event ){
   event.preventDefault()
   $.get( "/get_prereq/", $(this).serialize(),  data => loadGraph(data));
 });
+
 
 function loadGraph( data ){
   // set the top text
@@ -50,7 +52,13 @@ function loadGraph( data ){
         css: {
           'background-color' : "SteelBlue",
           'color' : 'white'
+        }
+      },
 
+      {
+        selector: ':child.selected', 
+        css: {
+          'background-color' : "lightgreen",
         }
       },
       {
@@ -80,7 +88,23 @@ function loadGraph( data ){
   
     layout: {
       name: 'dagre',
-      padding: 100,
+      padding: 50
     }
   });
+
+  cy.on('tap', 'node', function(event){
+
+    var node = event.target;
+    var name = node.json().data.name
+    console.log(cy.filter(`node[name = "${name}"]`))
+    cy.nodes().removeClass('selected')
+    cy.filter(`node[name = "${name}"]`).addClass('selected')
+  });
+
+  cy.on('taphold', 'node', function (event){
+    var name = event.target.json().data.name
+    name = encodeURI(name)
+    $.get( "/get_prereq/", `cid=${name}`,  data => loadGraph(data))
+  })
+  
 }
