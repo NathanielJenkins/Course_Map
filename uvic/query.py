@@ -54,25 +54,18 @@ def find_req(cid):
                
             })
 
-            courses['edges'].append({
-                "data" : {
-                    "id" : str(operation.id) + '-' + course.cid + "-" + str(operation_1.id),
-                    "target" : course.cid + "-" + str(operation_1.id), 
-                    "source": str(operation.id)
-                }
-            })      
+            # commented out for now. 
+            # courses['edges'].append({
+            #     "data" : {
+            #         "id" : str(operation.id) + '-' + course.cid + "-" + str(operation_1.id),
+            #         "target" : course.cid + "-" + str(operation_1.id), 
+            #         "source": str(operation.id)
+            #     }
+            # })      
 
             for combination in combination_set:
-                # add invisble edges so that dagre javascript works to create the layout, compound nodes are tricky
-                # did not see this coming
-                courses['edges'].append({
-                    "data" : {
-                        "target" : course.cid + "-" + str(operation_1.id), 
-                        "source": combination.course.cid + "-" + str(operation.id),
 
-                    },   
-                    "classes" : "hidden"
-                })  
+               
 
                 course_obj = {
                     "course" : combination.course,
@@ -92,7 +85,16 @@ def find_req(cid):
                         "parent" : course,
                     }
                 ) 
+                # add invisble edges so that dagre javascript works to create the layout, compound nodes are tricky
+                # did not see this coming
+                courses['edges'].append({
+                    "data" : {
+                        "target" : course.cid + "-" + str(operation_1.id), 
+                        "source": combination.course.cid + "-" + str(operation.id),
 
+                    },   
+                    "classes" : "vis"
+                })  
                       
 
     return courses
