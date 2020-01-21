@@ -9,6 +9,7 @@ def find_req(cid):
 
     # breadth first search
     q = queue.Queue()
+    visited = []
 
     # add start var
     level = 0;
@@ -18,7 +19,7 @@ def find_req(cid):
             { 
                 "course" : Course.objects.get(cid=cid),
                 "operation" : Operation(operation="Single", id=None),
-                "level" : level, 
+                # "level" : level, 
                 "parent" : None,
             }
         )
@@ -52,31 +53,43 @@ def find_req(cid):
                 }
             })
 
-            courses['edges'].append({
-                "data" : {
-                    "id" : str(operation.id) + '-' + course.cid + "-" + str(operation_1.id),
-                    "target" : course.cid + "-" + str(operation_1.id), 
-                    "source": str(operation.id)
-                }
-            })      
+            # commented out because of dagre not working
+            # courses['edges'].append({
+            #     "data" : {
+            #         "id" : str(operation.id) + '-' + course.cid + "-" + str(operation_1.id),
+            #         "target" : course.cid + "-" + str(operation_1.id), 
+            #         "source": str(operation.id)
+            #     }
+            # })      
 
             for combination in combination_set:
+                # add invisble edges so that dagre javascript works to create the layout
+
+                course_obj = {
+                    "course" : combination.course,
+                    "operation" : operation,             
+                }
+
+                if course_obj in visited:
+                    continue;
+
+                visited.append(course_obj)
                 q.put (
                     { 
                         "course" : combination.course,
                         "operation" : operation,
-                        "level" : prereq_tuple['level'] + 1, 
+                        # "level" : prereq_tuple['level'] + 1, 
                         "parent" : course,
                     }
                 ) 
-                # add invisble edges so that dagre javascript works to create the layout
+
                 courses['edges'].append({
                     "data" : {
                         "target" : course.cid + "-" + str(operation_1.id), 
                         "source": combination.course.cid + "-" + str(operation.id),
 
                     },   
-                    "classes" : 'hidden'               
-                })          
+                })  
+                      
 
     return courses
