@@ -1,4 +1,4 @@
-#a trash, super inefficient webparser built with beautiful soup
+#webscraper built with beautiful soup
 
 
 import requests
