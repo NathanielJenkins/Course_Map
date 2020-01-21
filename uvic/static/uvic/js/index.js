@@ -1,4 +1,5 @@
 // trigger the submit button on load for CSC 361 as default
+
 $( document ).ready(function() {
   $.get( "/get_prereq/", "cid=CSC%20361",  data => loadGraph(data))
 });
@@ -79,8 +80,7 @@ function loadGraph( data ){
   
     layout: {
       name: 'dagre',
-      padding: 100
-
+      padding: 100,
     }
   });
 }
