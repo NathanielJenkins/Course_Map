@@ -8,7 +8,7 @@ live demo: https://coursemap.herokuapp.com/
 <h2>Usage</h2>
  <p>Type a course into the search box at the top, an example could be "CSC 361"</p>
  <p>Holding on a course will search for that course, single click on a course will highlight all instances of the course</p>
-<iframe src='https://gfycat.com/ifr/BigIdealisticClumber' frameborder='0' scrolling='no' allowfullscreen width='640' height='409'></iframe>
+ ![](CourseMapDemo.gif)
   
 <h2>Development</h2>
 
