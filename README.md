@@ -1,6 +1,7 @@
 # Course_Map
 
 live demo: https://coursemap.herokuapp.com/
+###### Notice: the site is hosted on a free heroku account so it may take a moment to wake up from sleep, after which everything will be fast.
 
 ## Description
 
