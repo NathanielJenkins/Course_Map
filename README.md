@@ -7,9 +7,11 @@ live demo: https://coursemap.herokuapp.com/
 
 <h2>Usage</h2>
  <p>Type a course into the search box at the top, an example could be "CSC 361"</p>
+ <p>Holding on a course will search for that course, single click on a course will highlight all instances of the course</p>
+ <div style='position:relative; padding-bottom:calc(57.08% + 44px)'><iframe src='https://gfycat.com/ifr/BigIdealisticClumber'  frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe>  </div>
   
 <h2>Development</h2>
 
 <p>This website was created by scrapping the uvic course site with beautiful and creating a database of dependencies. There are three tables in the database, course, operations and precombinations. Courses may have many types of operations and operations may have many of different courses. For example, the course CSC 361 has two direct operations. Single course with SENG 265 and One of CSC 230, CENG 255 ECE 255. Each of these course have one or many operations, who have one or many precombination courses</p>
 
-<p>This tree is stored in the database, and is retrieved by a breath first search.</p>
+<p>This tree is stored in the database, and is retrieved by a breath first search. The website is writen in Django</p>
