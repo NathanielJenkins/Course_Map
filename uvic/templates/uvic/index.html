@@ -10,7 +10,6 @@
 <div class = 'container-fluid shadow' id = 'search'>
     <div class = 'row'>
         <div class = 'col my-auto'>
-            {% load crispy_forms_tags %}
             <form class = 'form-inline' action = "" id = "course_form" method="post">
                 {% csrf_token %}
                 <input class="form-control mr-2" id = 'cid-box' name="cid" placeholder="CSC 361">
